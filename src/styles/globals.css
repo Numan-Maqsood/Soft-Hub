@@ -1,0 +1,133 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* -----------ScrollBar-Start------- */
+::-webkit-scrollbar {
+  @apply w-0;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-slate-100;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-themePink;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-themePink;
+}
+
+/* -----------ScrollBar-End------- */
+
+body {
+  @apply font-opensans;
+}
+
+.text-montserrat {
+  @apply font-opensans;
+}
+
+.container {
+  @apply max-w-[1320px] w-full m-auto px-4;
+}
+
+h1 {
+  @apply text-[56px] leading-[1.2] font-medium font-opensans;
+}
+
+h2 {
+  @apply text-[52px] leading-[1.2] font-medium font-opensans;
+}
+
+h3 {
+  @apply text-[48px] leading-[1.2] font-medium font-opensans;
+}
+
+h4 {
+  @apply text-[38px] leading-[1.2] font-medium font-opensans;
+}
+
+h5 {
+  @apply text-[32px] leading-[1.2] font-medium font-opensans;
+}
+
+h6 {
+  @apply text-[24px] leading-[1.2] font-medium font-opensans;
+}
+
+p {
+  @apply text-[22px] font-opensans;
+}
+
+.paragraph {
+  @apply text-lg font-opensans;
+}
+
+/* ------------Media Queries-Start-----------*/
+
+@media (max-width: 1440px) {
+  .container {
+    @apply max-w-[1280px];
+  }
+
+  h1 {
+    @apply text-[52px] leading-[1.2] font-medium font-opensans;
+  }
+
+  h2 {
+    @apply text-[46px] leading-[1.2] font-medium font-opensans;
+  }
+
+  h3 {
+    @apply text-[44px] leading-[1.2] font-medium font-opensans;
+  }
+
+  h4 {
+    @apply text-[34px] leading-[1.2] font-medium font-opensans;
+  }
+
+  h5 {
+    @apply text-[28px] leading-[1.2] font-medium font-opensans;
+  }
+
+  h6 {
+    @apply text-[22px] leading-[1.2] font-medium font-opensans;
+  }
+
+  p {
+    @apply text-[20px] font-opensans;
+  }
+}
+
+/* ---------------Mobile-Media-Queries--------------- */
+@media (max-width: 767px) {
+  h1 {
+    @apply text-[40px] leading-[1.2] font-medium font-opensans;
+  }
+
+  h2 {
+    @apply text-[32px] leading-[1.2] font-medium font-opensans;
+  }
+
+  h3 {
+    @apply text-[28px] leading-[1.2] font-medium font-opensans;
+  }
+
+  h4 {
+    @apply text-[24px] leading-[1.2] font-medium font-opensans;
+  }
+
+  h5 {
+    @apply text-[22px] leading-[1.2] font-medium font-opensans;
+  }
+
+  h6 {
+    @apply text-[20px] leading-[1.2] font-medium font-opensans;
+  }
+
+  p {
+    @apply text-base font-opensans;
+  }
+}
