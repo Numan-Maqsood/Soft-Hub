@@ -8,13 +8,18 @@ module.exports = {
   ],
   theme: {
     extend: {
+      screens: {
+        iPad: '991px', // 👈 Your custom breakpoint
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
       colors: {
-        'themePink': '#EC145B',
+        'themeBlue': '#00477B',
+        'themeSky': '#4294E2',
+        'themeSeaGreen': '#51D6FF',
       },
       fontFamily: {
         'opensans': ['"Open Sans"', 'sans-serif'],

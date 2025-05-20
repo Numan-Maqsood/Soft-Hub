@@ -12,11 +12,11 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  @apply bg-themePink;
+  @apply bg-themeBlue;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  @apply bg-themePink;
+  @apply bg-themeBlue;
 }
 
 /* -----------ScrollBar-End------- */
@@ -34,11 +34,11 @@ body {
 }
 
 h1 {
-  @apply text-[56px] leading-[1.2] font-medium font-opensans;
+  @apply text-[64px] leading-[1.2] font-bold font-opensans;
 }
 
 h2 {
-  @apply text-[52px] leading-[1.2] font-medium font-opensans;
+  @apply text-[52px] leading-[1.2] font-bold font-opensans;
 }
 
 h3 {
@@ -65,6 +65,41 @@ p {
   @apply text-lg font-opensans;
 }
 
+.transate {
+  transition: 0.5s all ease-in-out;
+}
+
+.btn {
+  @apply px-5 py-[18px] bg-[#007AFC] text-white rounded-[4px] text-[20px] font-semibold border border-solid border-[#007AFC] hover:bg-white hover:border-[#007AFC] hover:text-[#007AFC] transate inline-block;
+}
+
+body.menu-open {
+  overflow: hidden;
+}
+
+.navigation a {
+  @apply text-white transate hover:text-themeSeaGreen text-xl font-semibold !m-0;
+}
+
+.navigation nav {
+  @apply gap-8;
+}
+
+
+/* Header Css Start */
+
+.mobileMenu a {
+  @apply inline-block w-full text-2xl leading-normal h-fit !mb-8;
+}
+
+
+/* Header Css Close */
+
+/* Home Page Css Start */
+
+
+/* Home Page Css Close */
+
 /* ------------Media Queries-Start-----------*/
 
 @media (max-width: 1440px) {
@@ -73,15 +108,15 @@ p {
   }
 
   h1 {
-    @apply text-[52px] leading-[1.2] font-medium font-opensans;
+    @apply text-[52px] leading-[1.2] font-bold font-opensans;
   }
 
   h2 {
-    @apply text-[46px] leading-[1.2] font-medium font-opensans;
+    @apply text-[46px] leading-[1.2] font-bold font-opensans;
   }
 
   h3 {
-    @apply text-[44px] leading-[1.2] font-medium font-opensans;
+    @apply text-[44px] leading-[1.2] font-bold font-opensans;
   }
 
   h4 {
@@ -104,15 +139,15 @@ p {
 /* ---------------Mobile-Media-Queries--------------- */
 @media (max-width: 767px) {
   h1 {
-    @apply text-[40px] leading-[1.2] font-medium font-opensans;
+    @apply text-[40px] leading-[1.2] font-bold font-opensans;
   }
 
   h2 {
-    @apply text-[32px] leading-[1.2] font-medium font-opensans;
+    @apply text-[32px] leading-[1.2] font-bold font-opensans;
   }
 
   h3 {
-    @apply text-[28px] leading-[1.2] font-medium font-opensans;
+    @apply text-[28px] leading-[1.2] font-bold font-opensans;
   }
 
   h4 {
@@ -129,5 +164,10 @@ p {
 
   p {
     @apply text-base font-opensans;
+  }
+
+
+  .Logo img {
+    @apply w-[120px];
   }
 }
