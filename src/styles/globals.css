@@ -261,7 +261,7 @@ body.menu-open {
 }
 
 .qualitySection .outerlayer .LayerTag {
-  @apply absolute py-[12px] px-[40px] text-[20px] font-bold;
+  @apply absolute py-[12px] px-[40px] text-[20px] rounded-[50px] bg-[#51D6FF] text-themeBlue font-bold;
 }
 
 .qualitySection .outerlayer .LayerTag.Left_Bottom {

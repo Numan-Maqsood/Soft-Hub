@@ -1,6 +1,6 @@
 import axios from "axios";
 import Head from "next/head";
-import React from "react";
+import React, { useEffect } from "react";
 import Header from "../Components/Header/Header";
 import Link from "next/link";
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -8,8 +8,18 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import Footer from "../Components/Footer/Footer";
 
+// Aos animate
+
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 export default function Index({ HomeData }) {
-  console.log(HomeData, "HomeData");
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // animation duration in ms
+      once: true,     // whether animation should happen only once
+    });
+  }, []);
 
   return (
     <>
@@ -24,7 +34,7 @@ export default function Index({ HomeData }) {
       <section className="BannerSection">
         <img className="w-full h-full absolute left-0 right-0 top-0 bottom-0 object-cover" src="BannerBg.png" alt="Banner Clouds" />
         <div className="container relative z-[9]">
-          <div className="BannerContent relative">
+          <div className="BannerContent relative" data-aos="fade-up" data-aos-duration="1500">
             <h1><span className="text-[#007DF5]">Delivering Digital</span> Transformation & E-learning </h1>
             <p className="text-lg font-semibold text-themeBlue mt-[20px] mb-[30px] lg:mb-[40px] xl:mb-[40px]">Founded in 2021, SoftHub is an innovative digital agency in Dubai, UAE. It excels in cutting-edge solutions and prioritizes client needs, leveraging creativity and tech expertise for diverse clients.</p>
             <Link className="btn" href="#.">Schedule a Demo</Link>
