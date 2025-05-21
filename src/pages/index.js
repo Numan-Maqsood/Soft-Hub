@@ -160,12 +160,15 @@ export default function Index({ HomeData }) {
       {/* Quality Section */}
       <div className="container">
         <div className="qualitySection bg-themeBlue rounded-[20px]">
-          <div className="outerlayer rounded_layer">
-            <div className="centerlayer rounded_layer">
-              <div className="frontlayer rounded_layer">
+          <div className="outerlayer rounded_layer relative">
+            <Link className="LayerTag Left_Bottom" href="#.">ERP</Link>
+            <div className="centerlayer rounded_layer relative">
+              <div className="frontlayer rounded_layer relative">
 
               </div>
             </div>
+            <Link className="LayerTag Right_Top" href="#.">ERP</Link>
+            <Link className="LayerTag Right_Bottom" href="#.">ERP</Link>
           </div>
         </div>
       </div>

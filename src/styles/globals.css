@@ -42,7 +42,7 @@ h2 {
 }
 
 h3 {
-  @apply text-[48px] leading-[1.2] font-bold font-opensans;
+  @apply text-[44px] leading-[1.2] font-bold font-opensans;
 }
 
 h4 {
@@ -85,13 +85,11 @@ body.menu-open {
   @apply gap-8;
 }
 
-
 /* Header Css Start */
 
 .mobileMenu a {
   @apply inline-block w-full text-2xl leading-normal h-fit !mb-8;
 }
-
 
 /* Header Css Close */
 
@@ -129,17 +127,16 @@ body.menu-open {
   @apply bg-white;
 }
 
-
 .Tags.RightTags ul li:nth-child(1) {
   @apply rotate-[-10deg] -left-[130px] absolute;
 }
 
 .Tags.RightTags {
-  @apply mr-[80px]
+  @apply mr-[80px];
 }
 
 .Tags.LeftTags {
-  @apply ml-[80px]
+  @apply ml-[80px];
 }
 
 .Tags.RightTags ul li:nth-child(2) {
@@ -161,8 +158,12 @@ body.menu-open {
 .BannerSection::before {
   content: '';
   @apply absolute left-0 right-0 bottom-0 w-full h-full z-[1];
-  background: #2A7B9B;
-  background: linear-gradient(180deg, rgba(42, 123, 155, 0) 60%, rgba(255, 255, 255, 1) 90%);
+  background: #2a7b9b;
+  background: linear-gradient(
+    180deg,
+    rgba(42, 123, 155, 0) 60%,
+    rgba(255, 255, 255, 1) 90%
+  );
 }
 
 .BannerSection {
@@ -180,7 +181,6 @@ body.menu-open {
 .BannerSection .partnersLogosSection .imagesWrapper {
   @apply max-w-[1000px] mx-auto flex flex-wrap justify-between py-5;
 }
-
 
 .ServicesSection {
   @apply py-16 text-center pb-20;
@@ -256,17 +256,32 @@ body.menu-open {
   @apply w-[94.4%] left-0 right-0 mx-auto;
 }
 
-
 .qualitySection .outerlayer {
-  @apply max-w-[1100px] min-h-[1100px] mt-[-90px];
+  @apply max-w-[1100px] min-h-[1100px] mt-[-24%];
+}
+
+.qualitySection .outerlayer .LayerTag {
+  @apply absolute py-[12px] px-[40px] text-[20px] font-bold;
+}
+
+.qualitySection .outerlayer .LayerTag.Left_Bottom {
+  @apply absolute top-[60%];
+}
+
+.qualitySection .outerlayer .LayerTag.Right_Top {
+  @apply absolute top-[30%] right-[30px];
+}
+
+.qualitySection .outerlayer .LayerTag.Right_Bottom {
+  @apply absolute top-[60%] right-[10px];
 }
 
 .qualitySection .centerlayer {
-  @apply max-w-[744px] min-h-[744px] mt-[10px];
+  @apply max-w-[744px] min-h-[744px] mt-[15%];
 }
 
 .qualitySection .frontlayer {
-  @apply max-w-[434px] min-h-[430px] mt-[10px];
+  @apply max-w-[434px] min-h-[430px] mt-[158px];
 }
 
 .qualitySection .rounded_layer {
@@ -285,7 +300,6 @@ body.menu-open {
   @apply pt-[80px] pb-[60px];
 }
 
-
 .footer .footerwrapper {
   @apply flex gap-x-[40px] gap-y-7 items-center pb-[42px];
 }
@@ -297,7 +311,6 @@ body.menu-open {
 .footer .FooterMenuWrapper .col {
   @apply max-w-[calc(34%-30px)] w-full;
 }
-
 
 .footer .footerwrapper .col.LogoSection {
   @apply max-w-[calc(36%-30px)];
@@ -324,8 +337,6 @@ body.menu-open {
 }
 
 /* Footer Css Close */
-
-
 
 /* ------------Media Queries-Start-----------*/
 
@@ -363,7 +374,7 @@ body.menu-open {
   }
 }
 
-@media(max-width:1024px) {
+@media (max-width: 1024px) {
   .BannerSection .BannerContent {
     @apply max-w-[800px];
   }
@@ -378,7 +389,7 @@ body.menu-open {
   }
 }
 
-@media(max-width:991px) {
+@media (max-width: 991px) {
   .ServicesSection .CardsWrapper .ServiceCard {
     @apply max-w-[calc(50%-20px)];
   }
@@ -433,7 +444,6 @@ body.menu-open {
     @apply text-base font-opensans;
   }
 
-
   .Logo img {
     @apply w-[120px];
   }
@@ -451,7 +461,7 @@ body.menu-open {
   }
 
   .Tags.LeftTags {
-    @apply left-[-60px]
+    @apply left-[-60px];
   }
 
   .Tags li a {
