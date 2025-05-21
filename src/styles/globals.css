@@ -38,27 +38,27 @@ h1 {
 }
 
 h2 {
-  @apply text-[52px] leading-[1.2] font-bold font-opensans;
+  @apply text-[56px] leading-[1.2] font-bold font-opensans;
 }
 
 h3 {
-  @apply text-[48px] leading-[1.2] font-medium font-opensans;
+  @apply text-[48px] leading-[1.2] font-bold font-opensans;
 }
 
 h4 {
-  @apply text-[38px] leading-[1.2] font-medium font-opensans;
+  @apply text-[38px] leading-[1.2] font-bold font-opensans;
 }
 
 h5 {
-  @apply text-[32px] leading-[1.2] font-medium font-opensans;
+  @apply text-[22px] leading-[1.2] font-bold font-opensans;
 }
 
 h6 {
-  @apply text-[24px] leading-[1.2] font-medium font-opensans;
+  @apply text-[20px] leading-[1.2] font-bold font-opensans;
 }
 
 p {
-  @apply text-[22px] font-opensans;
+  @apply text-[18px] font-opensans;
 }
 
 .paragraph {
@@ -162,10 +162,170 @@ body.menu-open {
   content: '';
   @apply absolute left-0 right-0 bottom-0 w-full h-full z-[1];
   background: #2A7B9B;
-  background: linear-gradient(186deg, rgba(42, 123, 155, 0) 60%, rgba(255, 255, 255, 1) 100%);
+  background: linear-gradient(180deg, rgba(42, 123, 155, 0) 60%, rgba(255, 255, 255, 1) 90%);
+}
+
+.BannerSection {
+  @apply relative h-[100vh] flex items-center pb-9;
+}
+
+.BannerSection .BannerContent {
+  @apply max-w-[960px] mx-auto text-center;
+}
+
+.BannerSection .partnersLogosSection {
+  @apply absolute bottom-[40px] left-0 right-0 mx-auto z-10;
+}
+
+.BannerSection .partnersLogosSection .imagesWrapper {
+  @apply max-w-[1000px] mx-auto flex flex-wrap justify-between py-5;
+}
+
+
+.ServicesSection {
+  @apply py-16 text-center pb-20;
+}
+
+.ServicesSection .cardicon {
+  @apply w-[120px] h-[120px] z-[1] mx-auto flex justify-center items-center relative;
+}
+
+.ServicesSection .cardicon .CardBg {
+  @apply absolute z-[-1];
+}
+
+.ServicesSection .CardsWrapper {
+  @apply flex flex-wrap gap-x-5 mt-[50px] justify-between gap-y-5;
+}
+
+.ServicesSection .CardsWrapper .ServiceCard {
+  @apply max-w-[calc(25%-20px)] w-full;
+}
+
+.ServicesSection .CardsWrapper .ServiceCard h5 {
+  @apply font-bold mb-[15px] text-themeBlue;
+}
+
+.ServicesSection .CardsWrapper .ServiceCard p {
+  @apply text-sm text-themeBlue;
+}
+
+.ServicesSection .CardsWrapper .ServiceCard .cardContent {
+  @apply bg-[#C0EDFF] pt-[90px] px-[14px] pb-[50px] rounded-[20px] mt-[-70px];
+}
+
+.ClientsSection .ClientCard {
+  @apply min-h-[480px] p-[14px] rounded-[22px] w-full transate;
+}
+
+.ClientsSection .CardsWrapper {
+  @apply gap-x-[40px];
+}
+
+.ClientsSection .CardsWrapper .Review {
+  @apply bg-white rounded-[30px] pb-[120px] pt-[30px] transate mt-0 px-[30px] mb-[60px] ml-[-20px] w-full rotate-[-15deg];
+  box-shadow: 0px 0.93px 30.57px 0.93px #00000026;
+}
+
+.ClientsSection .CardsWrapper .ClientCard:hover .Review {
+  @apply transate mb-[120px] ml-[0px] !mr-[0] !rotate-[0deg] mt-[-60px];
+}
+
+.ClientsSection .CardsWrapper .swiper-slide:nth-child(2) .Review {
+  @apply rotate-[15deg] mr-[-30px] ml-auto;
+}
+
+.ClientsSection .CardsWrapper .swiper-slide:nth-child(2) {
+  @apply z-[1];
+}
+
+.ClientsSection .CardsWrapper .ClientCard .customerReview {
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ClientsSection .CardsWrapper .topImg img,
+.ClientsSection .CardsWrapper .bottomImg img {
+  @apply w-full;
+}
+
+.ClientsSection .CardsWrapper .bottomImg {
+  @apply w-[94.4%] left-0 right-0 mx-auto;
+}
+
+
+.qualitySection .outerlayer {
+  @apply max-w-[1100px] min-h-[1100px] mt-[-90px];
+}
+
+.qualitySection .centerlayer {
+  @apply max-w-[744px] min-h-[744px] mt-[10px];
+}
+
+.qualitySection .frontlayer {
+  @apply max-w-[434px] min-h-[430px] mt-[10px];
+}
+
+.qualitySection .rounded_layer {
+  @apply mx-auto border border-solid border-white rounded-[50%];
+}
+
+.qualitySection {
+  @apply h-[460px] overflow-hidden;
 }
 
 /* Home Page Css Close */
+
+/* Footer Css Start */
+
+.footer {
+  @apply pt-[80px] pb-[60px];
+}
+
+
+.footer .footerwrapper {
+  @apply flex gap-x-[40px] gap-y-7 items-center pb-[42px];
+}
+
+.footer .FooterMenuWrapper {
+  @apply flex gap-x-[40px] w-full items-start;
+}
+
+.footer .FooterMenuWrapper .col {
+  @apply max-w-[calc(34%-30px)] w-full;
+}
+
+
+.footer .footerwrapper .col.LogoSection {
+  @apply max-w-[calc(36%-30px)];
+}
+
+.footer .footerwrapper .col.footerMenu a {
+  @apply text-[20px] transate font-normal text-white;
+}
+
+.footer .footerwrapper .col.footerMenu ul {
+  @apply flex flex-col gap-y-8;
+}
+
+.footer .footerwrapper .col.footerMenu a:hover {
+  @apply font-bold transate text-[#86D0CD];
+}
+
+.footer .copyright {
+  @apply pt-[30px] border-t border-solid border-white;
+}
+
+.footer .copyright p {
+  @apply text-xl text-white;
+}
+
+/* Footer Css Close */
+
+
 
 /* ------------Media Queries-Start-----------*/
 
@@ -187,30 +347,70 @@ body.menu-open {
   }
 
   h4 {
-    @apply text-[34px] leading-[1.2] font-medium font-opensans;
+    @apply text-[34px] leading-[1.2] font-bold font-opensans;
   }
 
   h5 {
-    @apply text-[28px] leading-[1.2] font-medium font-opensans;
+    @apply text-[22px] leading-[1.2] font-bold font-opensans;
   }
 
   h6 {
-    @apply text-[22px] leading-[1.2] font-medium font-opensans;
+    @apply text-[20px] leading-[1.2] font-bold font-opensans;
   }
 
   p {
-    @apply text-[20px] font-opensans;
+    @apply text-[18px] font-opensans;
   }
 }
 
-/* ---------------Mobile-Media-Queries--------------- */
+@media(max-width:1024px) {
+  .BannerSection .BannerContent {
+    @apply max-w-[800px];
+  }
+
+  .BannerSection {
+    height: fit-content;
+    padding: 220px 0px 330px;
+  }
+
+  .ClientsSection .CardsWrapper {
+    @apply block;
+  }
+}
+
+@media(max-width:991px) {
+  .ServicesSection .CardsWrapper .ServiceCard {
+    @apply max-w-[calc(50%-20px)];
+  }
+
+  .ServicesSection .CardsWrapper {
+    @apply mt-[40px];
+  }
+
+  .ClientsSection .CardsWrapper .Review {
+    @apply rotate-[-5deg] ml-0 pb-[80px];
+  }
+
+  .ClientsSection .CardsWrapper .bottomImg {
+    @apply w-[94.4%];
+  }
+
+  .footer .footerwrapper {
+    @apply flex-wrap;
+  }
+
+  .footer .footerwrapper .col.LogoSection {
+    @apply max-w-[calc(70%-30px)];
+  }
+}
+
 @media (max-width: 767px) {
   h1 {
     @apply text-[36px] leading-[1.2] font-bold font-opensans;
   }
 
   h2 {
-    @apply text-[30px] leading-[1.2] font-bold font-opensans;
+    @apply text-[44px] leading-[1.2] font-bold font-opensans;
   }
 
   h3 {
@@ -236,5 +436,74 @@ body.menu-open {
 
   .Logo img {
     @apply w-[120px];
+  }
+
+  .BannerSection .BannerContent {
+    @apply max-w-[600px];
+  }
+
+  .BannerSection {
+    @apply pt-[190px] pb-[460px] h-fit;
+  }
+
+  .btn {
+    @apply py-3 px-6 text-base;
+  }
+
+  .Tags.LeftTags {
+    @apply left-[-60px]
+  }
+
+  .Tags li a {
+    @apply p-[10px] min-w-[120px] text-sm;
+  }
+
+  .Badges {
+    @apply bottom-[300px];
+  }
+
+  .Tags.RightTags {
+    @apply bottom-[-140px];
+  }
+
+  .Tags.RightTags ul li:nth-child(3) {
+    @apply right-[-30px];
+  }
+
+  .Tags ul {
+    @apply min-h-[130px];
+  }
+
+  .Tags ul li:nth-child(2) {
+    @apply right-[-240px] bottom-[60px];
+  }
+
+  .ServicesSection .CardsWrapper .ServiceCard {
+    @apply max-w-full;
+  }
+
+  .ServicesSection .CardsWrapper {
+    @apply mt-[40px];
+  }
+
+  .ServicesSection {
+    @apply pt-8;
+  }
+
+  .footer .footerwrapper .col.LogoSection,
+  .footer .FooterMenuWrapper .col {
+    @apply max-w-full;
+  }
+
+  .footer .FooterMenuWrapper {
+    @apply flex-wrap gap-y-6;
+  }
+
+  .footer .footerwrapper .col.footerMenu ul {
+    @apply gap-y-6;
+  }
+
+  .footer .copyright p {
+    @apply text-[16px];
   }
 }
