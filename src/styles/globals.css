@@ -265,15 +265,47 @@ body.menu-open {
 }
 
 .qualitySection .outerlayer .LayerTag.Left_Bottom {
-  @apply absolute top-[60%];
+  @apply absolute top-[55%] left-[-40px];
 }
 
 .qualitySection .outerlayer .LayerTag.Right_Top {
-  @apply absolute top-[30%] right-[30px];
+  @apply absolute top-[30%] right-[-30px];
 }
 
 .qualitySection .outerlayer .LayerTag.Right_Bottom {
-  @apply absolute top-[60%] right-[10px];
+  @apply absolute top-[60%] right-[-70px];
+}
+
+.qualitySection .centerlayer .LayerTag.right_mid {
+  @apply absolute top-[50%] right-[-60px];
+}
+
+.qualitySection .centerlayer .LayerTag.Left_Top {
+  @apply absolute top-[30%] left-[-90px];
+}
+
+.qualitySection .centerlayer .LayerTag.Left_Bottom {
+  @apply absolute top-[68%] left-[-50px];
+}
+
+.qualitySection .frontlayer .LayerTag.Right_Bottom {
+  @apply absolute top-auto bottom-[4%] right-[10px];
+}
+
+.qualitySection .frontlayer .innercontent {
+  @apply max-w-[420px] m-auto px-5;
+}
+
+.qualitySection .frontlayer .innercontent h2 {
+  @apply text-[42px];
+}
+
+.qualitySection .frontlayer .LayerTag.Left_Top {
+  @apply absolute top-[40%] left-[-130px];
+}
+
+.qualitySection .frontlayer .LayerTag.Right_Top {
+  @apply absolute top-[12%] right-[-90px];
 }
 
 .qualitySection .centerlayer {

@@ -173,12 +173,20 @@ export default function Index({ HomeData }) {
           <div className="outerlayer rounded_layer relative">
             <Link className="LayerTag Left_Bottom" href="#.">ERP</Link>
             <div className="centerlayer rounded_layer relative">
-              <div className="frontlayer rounded_layer relative">
-
+              <Link className="LayerTag Left_Top !bg-[#002B4A] !text-white" href="#.">Graphics</Link>
+              <Link className="LayerTag Left_Bottom !bg-[#6DE4DF]" href="#.">Marketing</Link>
+              <div className="frontlayer flex items-start justify-center rounded_layer relative">
+                <Link className="LayerTag Left_Top" href="#.">Branding</Link>
+                <div className="innercontent text-center">
+                  <h6 className="text-white mb-[6px]">Learn About</h6>
+                  <h2 className="text-themeSeaGreen">Quality in Everything We Do</h2></div>
+                <Link className="LayerTag Right_Top" href="#.">Developments</Link>
+                <Link className="LayerTag Right_Bottom" href="#.">UI / UX</Link>
               </div>
+              <Link className="LayerTag right_mid" href="#.">Portals</Link>
             </div>
-            <Link className="LayerTag Right_Top" href="#.">ERP</Link>
-            <Link className="LayerTag Right_Bottom" href="#.">ERP</Link>
+            <Link className="LayerTag Right_Top" href="#.">Mobile</Link>
+            <Link className="LayerTag Right_Bottom" href="#.">Web Development</Link>
           </div>
         </div>
       </div>
