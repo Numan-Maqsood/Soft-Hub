@@ -39,7 +39,7 @@ const Header = ({HeaderfooterData}) => {
 
 
     return (
-        <div className="container absolute w-full left-0 top-11 md:top-16 right-0 mx-auto z-10 overflow-hidden" data-aos="fade-down" data-aos-duration="1500">
+        <div className="container absolute w-full left-0 top-11 md:top-16 right-0 mx-auto z-10">
             <header className="bg-themeBlue text-white rounded-[64px]">
                 <div className='flex items-center justify-between px-7 py-4 md:px-8'>
                     {/* Logo */}
@@ -50,7 +50,7 @@ const Header = ({HeaderfooterData}) => {
                     <div className="navigation">
 
                         {/* Desktop Navigation */}
-                        <nav className="hidden iPad:flex space-x-6" data-aos="fade-in"  data-aos-duration="1500">
+                        <nav className="hidden iPad:flex space-x-6">
                             <Link href={HeaderfooterData.acf.header.navigation.item_one_url} className="">{HeaderfooterData.acf.header.navigation.item_one_text}</Link>
                             <Link href={HeaderfooterData.acf.header.navigation.item_two_url} className="">{HeaderfooterData.acf.header.navigation.item_two_text}</Link>
                             <Link href={HeaderfooterData.acf.header.navigation.item_three_url} className="">{HeaderfooterData.acf.header.navigation.item_three_text}</Link>
