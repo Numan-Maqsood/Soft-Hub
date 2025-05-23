@@ -1,8 +1,11 @@
-'use client';
-
 import Image from 'next/image';
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
+
+// Aos animate
+
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Header = ({HeaderfooterData}) => {
 
@@ -26,20 +29,28 @@ const Header = ({HeaderfooterData}) => {
         };
     }, [menuOpen]);
 
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // animation duration in ms
+      once: true,     // whether animation should happen only once
+    });
+  }, []);
+
+
 
     return (
-        <div className="container absolute w-full left-0 top-11 md:top-16 right-0 mx-auto z-10">
+        <div className="container absolute w-full left-0 top-11 md:top-16 right-0 mx-auto z-10 overflow-hidden" data-aos="fade-down" data-aos-duration="1500">
             <header className="bg-themeBlue text-white rounded-[64px]">
                 <div className='flex items-center justify-between px-7 py-4 md:px-8'>
                     {/* Logo */}
-                    <div className="Logo">
+                    <div className="Logo" data-aos="fade-in"  data-aos-duration="1500">
                         <Image src={HeaderfooterData.acf.header.logo_url} alt="Logo" width={190} height={44} />
                     </div>
 
                     <div className="navigation">
 
                         {/* Desktop Navigation */}
-                        <nav className="hidden iPad:flex space-x-6">
+                        <nav className="hidden iPad:flex space-x-6" data-aos="fade-in"  data-aos-duration="1500">
                             <Link href={HeaderfooterData.acf.header.navigation.item_one_url} className="">{HeaderfooterData.acf.header.navigation.item_one_text}</Link>
                             <Link href={HeaderfooterData.acf.header.navigation.item_two_url} className="">{HeaderfooterData.acf.header.navigation.item_two_text}</Link>
                             <Link href={HeaderfooterData.acf.header.navigation.item_three_url} className="">{HeaderfooterData.acf.header.navigation.item_three_text}</Link>

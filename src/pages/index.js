@@ -33,7 +33,7 @@ export default function Index({ blogsData, allblogsData, HomeData, HeaderfooterD
       <Header HeaderfooterData={HeaderfooterData}/>
 
       {/* Banner Section */}
-      <section className="BannerSection">
+      <section className="BannerSection overflow-hidden">
         <img className="w-full h-full absolute left-0 right-0 top-0 bottom-0 object-cover" src={HomeData.acf.banner_section.banner_background_image_url} alt="Banner Clouds" />
         <div className="container relative z-[9]">
           <div className="BannerContent relative" data-aos="fade-up" data-aos-duration="1500">
@@ -48,33 +48,33 @@ export default function Index({ blogsData, allblogsData, HomeData, HeaderfooterD
             <div className="Tags LeftTags">
               <ul>
                 <li>
-                  <Link href="#.">{HomeData.acf.banner_section.banner_left_badges.left_badge_one}</Link>
+                  <Link data-aos="fade-up" data-aos-duration="1500" href="#.">{HomeData.acf.banner_section.banner_left_badges.left_badge_one}</Link>
                 </li>
                 <li>
-                  <Link href="#.">{HomeData.acf.banner_section.banner_left_badges.left_badge_two}</Link>
+                  <Link data-aos="fade-up" data-aos-duration="1500" href="#.">{HomeData.acf.banner_section.banner_left_badges.left_badge_two}</Link>
                 </li>
                 <li>
-                  <Link href="#.">{HomeData.acf.banner_section.banner_left_badges.left_badge_three}</Link>
+                  <Link data-aos="fade-up" data-aos-duration="1500" href="#.">{HomeData.acf.banner_section.banner_left_badges.left_badge_three}</Link>
                 </li>
               </ul>
             </div>
             <div className="Tags RightTags">
               <ul>
                 <li>
-                  <Link href="#.">{HomeData.acf.banner_section.banner_right_badges.right_badge_one}</Link>
+                  <Link data-aos="fade-up" data-aos-duration="1500" href="#.">{HomeData.acf.banner_section.banner_right_badges.right_badge_one}</Link>
                 </li>
                 <li>
-                  <Link href="#.">{HomeData.acf.banner_section.banner_right_badges.right_badge_two}</Link>
+                  <Link data-aos="fade-up" data-aos-duration="1500" href="#.">{HomeData.acf.banner_section.banner_right_badges.right_badge_two}</Link>
                 </li>
                 <li>
-                  <Link href="#.">{HomeData.acf.banner_section.banner_right_badges.right_badge_three}</Link>
+                  <Link data-aos="fade-up" data-aos-duration="1500" href="#.">{HomeData.acf.banner_section.banner_right_badges.right_badge_three}</Link>
                 </li>
               </ul>
             </div>
           </div>
         </div>
         {/* Partner's Section */}
-        <section className="partnersLogosSection">
+        <section className="partnersLogosSection" data-aos="fade-up" data-aos-duration="1500">
           <div className="container">
             <div className="imagesWrapper">
               <Swiper
