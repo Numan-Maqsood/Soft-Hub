@@ -1,6 +1,6 @@
 import axios from "axios";
 import Head from "next/head";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Header from "../Components/Header/Header";
 import Link from "next/link";
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -13,7 +13,8 @@ import Footer from "../Components/Footer/Footer";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
-export default function Index({ HomeData }) {
+export default function Index({ blogsData, allblogsData }) {
+
   useEffect(() => {
     AOS.init({
       duration: 1000, // animation duration in ms
@@ -24,7 +25,8 @@ export default function Index({ HomeData }) {
   return (
     <>
       <Head>
-        <title>Soft Hub</title>
+        <title>SOFT HUB</title>
+        <link rel="icon" href="/Favicon.png" />
       </Head>
 
       {/* Header */}
@@ -191,6 +193,52 @@ export default function Index({ HomeData }) {
         </div>
       </div>
 
+
+      {/* Blogs Section */}
+      <div className="container">
+        <div className=" Blogs_Section">
+          <h6 className="text-themeBlue mb-[6px] text-center">Enjoy With</h6>
+          <h2 className="text-[#007AFC] text-center">Our Blogs</h2>
+          <div className="ContentWrap">
+            <ul className="BlogWrapper">
+              {allblogsData.slice(0, 2).map((blog, i) => (
+                <li key={i} className="text-black">
+                  <Link className="Blog" href={`/blogs/${blog.slug}`}>
+                    <div className="blogImage">
+                      <img className="rounded-[10px]" src={blog.fimg_url} alt={blog.title?.rendered} />
+                    </div>
+                    <div className="BlogContent">
+                      <h5 className="text-themeBlue font-semibold">{blog.title?.rendered}</h5>
+                      <p className="text-[#535353] text-base">{blog.acf.content?.blog_description}</p>
+                      <span className="text-themeBlue underline font-semibold">Read More</span>
+                    </div>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+
+            {/* Additional Blog Titles */}
+            <div className="TopicBox">
+              <h4 className="">Topics</h4>
+              <ul className="">
+                {allblogsData.slice(2).map((blog, i) => (
+                  <li
+                    key={i}
+                    className={`${(i % 2 === 1) ? '!bg-[#97BEFF] !text-themeBlue' : ''} px-4 py-2 rounded`}
+                  >
+                    <Link href={`/blogs/${blog.slug}`}>
+                      {blog.title?.rendered}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+
       {/* Clients Section */}
       <div className="container">
         <section className="ServicesSection ClientsSection">
@@ -288,21 +336,32 @@ export default function Index({ HomeData }) {
 
 // Get Static Props
 export async function getStaticProps() {
-  let HomeData = {};
+  let blogsData = {};
+  let allblogsData = [];
 
   try {
-    const homeresponse = await axios.get(
-      `${process.env.NEXT_PUBLIC_API_BASE_URL}/wp-json/wp/v2/pages/92`
+    const projectsResponse = await axios.get(
+      `${process.env.NEXT_PUBLIC_API_BASE_URL}/wp-json/wp/v2/pages/1022`
     );
-    HomeData = homeresponse.data;
+    blogsData = projectsResponse.data;
+
+    const allProjectsResponse =
+      projectsResponse.acf?.all_posts_container.blog_posts || [];
+    const allProjectsIds = allProjectsResponse.map((post) => post.ID).join(",");
+    const allProjectsIdsRes = await axios.get(
+      `${process.env.NEXT_PUBLIC_API_BASE_URL}/wp-json/wp/v2/posts?include=${allProjectsIds}`
+    );
+    allblogsData = allProjectsIdsRes.data;
   } catch (error) {
     console.error("Error fetching data:", error);
   }
 
   return {
     props: {
-      HomeData,
+      blogsData,
+      allblogsData,
     },
     revalidate: 3600,
   };
 }
+
