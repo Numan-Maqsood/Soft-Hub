@@ -13,7 +13,7 @@ import Footer from "../Components/Footer/Footer";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
-export default function Index({ blogsData, allblogsData }) {
+export default function Index({ blogsData, allblogsData, HomeData }) {
 
   useEffect(() => {
     AOS.init({
@@ -34,12 +34,13 @@ export default function Index({ blogsData, allblogsData }) {
 
       {/* Banner Section */}
       <section className="BannerSection">
-        <img className="w-full h-full absolute left-0 right-0 top-0 bottom-0 object-cover" src="BannerBg.png" alt="Banner Clouds" />
+        <img className="w-full h-full absolute left-0 right-0 top-0 bottom-0 object-cover" src={HomeData.acf.banner_section.banner_background_image_url} alt="Banner Clouds" />
         <div className="container relative z-[9]">
           <div className="BannerContent relative" data-aos="fade-up" data-aos-duration="1500">
-            <h1><span className="text-[#007DF5]">Delivering Digital</span> Transformation & E-learning </h1>
-            <p className="text-lg font-semibold text-themeBlue mt-[20px] mb-[30px] lg:mb-[40px] xl:mb-[40px]">Founded in 2021, SoftHub is an innovative digital agency in Dubai, UAE. It excels in cutting-edge solutions and prioritizes client needs, leveraging creativity and tech expertise for diverse clients.</p>
-            <Link className="btn" href="#.">Schedule a Demo</Link>
+            <h1><span className="text-[#007DF5]">{HomeData.acf.banner_section.banner_title_blue_text}</span> {HomeData.acf.banner_section.banner_title}</h1>
+            {/* <p className="text-lg font-semibold text-themeBlue mt-[20px] mb-[30px] lg:mb-[40px] xl:mb-[40px]">Founded in 2021, SoftHub is an innovative digital agency in Dubai, UAE. It excels in cutting-edge solutions and prioritizes client needs, leveraging creativity and tech expertise for diverse clients.</p> */}
+            <div className="text-lg font-semibold text-themeBlue mt-[20px] mb-[30px] lg:mb-[40px] xl:mb-[40px]" dangerouslySetInnerHTML={{ __html: HomeData.acf.banner_section.banner_description }}></div>
+            <Link className="btn" href={HomeData.acf.banner_section.banner_button_url}>{HomeData.acf.banner_section.banner_button_text}</Link>
           </div>
         </div>
         <div className="container absolute left-0 right-0 bottom-40 Badges">
@@ -47,26 +48,26 @@ export default function Index({ blogsData, allblogsData }) {
             <div className="Tags LeftTags">
               <ul>
                 <li>
-                  <Link href="#.">Development</Link>
+                  <Link href="#.">{HomeData.acf.banner_section.banner_left_badges.left_badge_one}</Link>
                 </li>
                 <li>
-                  <Link href="#.">Web</Link>
+                  <Link href="#.">{HomeData.acf.banner_section.banner_left_badges.left_badge_two}</Link>
                 </li>
                 <li>
-                  <Link href="#.">Mobile</Link>
+                  <Link href="#.">{HomeData.acf.banner_section.banner_left_badges.left_badge_three}</Link>
                 </li>
               </ul>
             </div>
             <div className="Tags RightTags">
               <ul>
                 <li>
-                  <Link href="#.">Data</Link>
+                  <Link href="#.">{HomeData.acf.banner_section.banner_right_badges.right_badge_one}</Link>
                 </li>
                 <li>
-                  <Link href="#.">UI/UX</Link>
+                  <Link href="#.">{HomeData.acf.banner_section.banner_right_badges.right_badge_two}</Link>
                 </li>
                 <li>
-                  <Link href="#.">ERP</Link>
+                  <Link href="#.">{HomeData.acf.banner_section.banner_right_badges.right_badge_three}</Link>
                 </li>
               </ul>
             </div>
@@ -95,22 +96,22 @@ export default function Index({ blogsData, allblogsData }) {
               >
                 <SwiperSlide>
                   <div className="PartnerLogo">
-                    <img src="Sabis.png" />
+                    <img src={HomeData.acf.banner_section.partners_slider.image_one_url} />
                   </div>
                 </SwiperSlide>
                 <SwiperSlide>
                   <div className="PartnerLogo">
-                    <img src="rhu.png" />
+                    <img src={HomeData.acf.banner_section.partners_slider.image_two_url} />
                   </div>
                 </SwiperSlide>
                 <SwiperSlide>
                   <div className="PartnerLogo">
-                    <img src="UNICEF.png" />
+                    <img src={HomeData.acf.banner_section.partners_slider.image_three_url} />
                   </div>
                 </SwiperSlide>
                 <SwiperSlide>
                   <div className="PartnerLogo">
-                    <img src="World_Health_Organization.png" />
+                    <img src={HomeData.acf.banner_section.partners_slider.image_four_url} />
                   </div>
                 </SwiperSlide>
               </Swiper>
@@ -122,47 +123,47 @@ export default function Index({ blogsData, allblogsData }) {
       {/* Services Section */}
       <div className="container">
         <section className="ServicesSection">
-          <h6 className="text-themeBlue mb-[6px]">Learn more About</h6>
-          <h2 className="text-[#007AFC]">Our Service</h2>
+          <h6 className="text-themeBlue mb-[6px]">{HomeData.acf.services_section.section_subheading}</h6>
+          <h2 className="text-[#007AFC]">{HomeData.acf.services_section.section_title}</h2>
           <div className="CardsWrapper">
             <div className="ServiceCard">
               <div className="cardicon">
                 <img className="CardBg" src="imgBg.png" />
-                <img src="e-service.png" />
+                <img src={HomeData.acf.services_section.services_cards.service_card_one.card_icon_url} />
               </div>
               <div className="cardContent">
-                <h5>E-Service</h5>
-                <p>Successful government needs technology, user-friendly interfaces, and strong cybersecurity for citizens to easily access online services and build trust.</p>
+                <h5>{HomeData.acf.services_section.services_cards.service_card_one.card_title}</h5>
+                <p>{HomeData.acf.services_section.services_cards.service_card_one.card_description}</p>
               </div>
             </div>
             <div className="ServiceCard">
               <div className="cardicon">
                 <img className="CardBg" src="imgBg.png" />
-                <img src="e-service.png" />
+                <img src={HomeData.acf.services_section.services_cards.service_card_two.card_icon_url} />
               </div>
               <div className="cardContent">
-                <h5>E-Service</h5>
-                <p>Successful government needs technology, user-friendly interfaces, and strong cybersecurity for citizens to easily access online services and build trust.</p>
+                <h5>{HomeData.acf.services_section.services_cards.service_card_two.card_title}</h5>
+                <p>{HomeData.acf.services_section.services_cards.service_card_two.card_description}</p>
               </div>
             </div>
             <div className="ServiceCard">
               <div className="cardicon">
                 <img className="CardBg" src="imgBg.png" />
-                <img src="e-service.png" />
+                <img src={HomeData.acf.services_section.services_cards.service_card_three.card_icon_url} />
               </div>
               <div className="cardContent">
-                <h5>E-Service</h5>
-                <p>Successful government needs technology, user-friendly interfaces, and strong cybersecurity for citizens to easily access online services and build trust.</p>
+                <h5>{HomeData.acf.services_section.services_cards.service_card_three.card_title}</h5>
+                <p>{HomeData.acf.services_section.services_cards.service_card_three.card_description}</p>
               </div>
             </div>
             <div className="ServiceCard">
               <div className="cardicon">
                 <img className="CardBg" src="imgBg.png" />
-                <img src="e-service.png" />
+                <img src={HomeData.acf.services_section.services_cards.service_card_four.card_icon_url} />
               </div>
               <div className="cardContent">
-                <h5>E-Service</h5>
-                <p>Successful government needs technology, user-friendly interfaces, and strong cybersecurity for citizens to easily access online services and build trust.</p>
+                <h5>{HomeData.acf.services_section.services_cards.service_card_four.card_title}</h5>
+                <p>{HomeData.acf.services_section.services_cards.service_card_four.card_description}</p>
               </div>
             </div>
           </div>
@@ -173,22 +174,23 @@ export default function Index({ blogsData, allblogsData }) {
       <div className="container">
         <div className="qualitySection bg-themeBlue rounded-[20px]">
           <div className="outerlayer rounded_layer relative">
-            <Link className="LayerTag Left_Bottom" href="#.">ERP</Link>
+            <Link className="LayerTag Left_Bottom" href="#.">{HomeData.acf.layers_section.outer_layer.left_badge}</Link>
             <div className="centerlayer rounded_layer relative">
-              <Link className="LayerTag Left_Top !bg-[#002B4A] !text-white" href="#.">Graphics</Link>
-              <Link className="LayerTag Left_Bottom !bg-[#6DE4DF]" href="#.">Marketing</Link>
+              <Link className="LayerTag Left_Top !bg-[#002B4A] !text-white" href="#.">{HomeData.acf.layers_section.center_layer.left_top_badge}</Link>
+              <Link className="LayerTag Left_Bottom !bg-[#6DE4DF]" href="#.">{HomeData.acf.layers_section.center_layer.left_bottom_badge}</Link>
               <div className="frontlayer flex items-start justify-center rounded_layer relative">
-                <Link className="LayerTag Left_Top" href="#.">Branding</Link>
+                <Link className="LayerTag Left_Top" href="#.">{HomeData.acf.layers_section.inner_layer.left_top_badge}</Link>
                 <div className="innercontent text-center">
-                  <h6 className="text-white mb-[6px]">Learn About</h6>
-                  <h2 className="text-themeSeaGreen">Quality in Everything We Do</h2></div>
-                <Link className="LayerTag Right_Top" href="#.">Developments</Link>
-                <Link className="LayerTag Right_Bottom" href="#.">UI / UX</Link>
+                  <h6 className="text-white mb-[6px]">{HomeData.acf.layers_section.section_content.section_subheading}</h6>
+                  <h2 className="text-themeSeaGreen">{HomeData.acf.layers_section.section_content.section_title}</h2>
+                </div>
+                <Link className="LayerTag Right_Top" href="#.">{HomeData.acf.layers_section.inner_layer.right_top_badge}</Link>
+                <Link className="LayerTag Right_Bottom" href="#.">{HomeData.acf.layers_section.inner_layer.right_bottom_badge}</Link>
               </div>
-              <Link className="LayerTag right_mid" href="#.">Portals</Link>
+              <Link className="LayerTag right_mid" href="#.">{HomeData.acf.layers_section.center_layer.right_center_badge}</Link>
             </div>
-            <Link className="LayerTag Right_Top" href="#.">Mobile</Link>
-            <Link className="LayerTag Right_Bottom" href="#.">Web Development</Link>
+            <Link className="LayerTag Right_Top" href="#.">{HomeData.acf.layers_section.outer_layer.right_top_badge}</Link>
+            <Link className="LayerTag Right_Bottom" href="#.">{HomeData.acf.layers_section.outer_layer.right_bottom_badge}</Link>
           </div>
         </div>
       </div>
@@ -197,8 +199,8 @@ export default function Index({ blogsData, allblogsData }) {
       {/* Blogs Section */}
       <div className="container">
         <div className=" Blogs_Section">
-          <h6 className="text-themeBlue mb-[6px] text-center">Enjoy With</h6>
-          <h2 className="text-[#007AFC] text-center">Our Blogs</h2>
+          <h6 className="text-themeBlue mb-[6px] text-center">{HomeData.acf.blogs_section.section_subheading}</h6>
+          <h2 className="text-[#007AFC] text-center">{HomeData.acf.blogs_section.section_title}</h2>
           <div className="ContentWrap">
             <ul className="BlogWrapper">
               {allblogsData.slice(0, 2).map((blog, i) => (
@@ -219,7 +221,7 @@ export default function Index({ blogsData, allblogsData }) {
 
             {/* Additional Blog Titles */}
             <div className="TopicBox">
-              <h4 className="">Topics</h4>
+              <h4 className="">{HomeData.acf.blogs_section.topic_heading}</h4>
               <ul className="">
                 {allblogsData.slice(2).map((blog, i) => (
                   <li
@@ -242,8 +244,8 @@ export default function Index({ blogsData, allblogsData }) {
       {/* Clients Section */}
       <div className="container">
         <section className="ServicesSection ClientsSection">
-          <h6 className="text-themeBlue mb-[6px]">We Proud With</h6>
-          <h2 className="text-[#007AFC]">What our clients say</h2>
+          <h6 className="text-themeBlue mb-[6px]">{HomeData.acf.clients_section.section_sub_heading}</h6>
+          <h2 className="text-[#007AFC]">{HomeData.acf.clients_section.section_heading}</h2>
           <div className="CardsWrapper">
             <Swiper
               spaceBetween={60}
@@ -269,13 +271,13 @@ export default function Index({ blogsData, allblogsData }) {
                   </div>
                   <div className="Review text-left">
                     <div className="clientdetail flex items-center gap-2">
-                      <img src="Name.png" />
+                      <img src={HomeData.acf.clients_section.review_one.client_image} />
                       <div className="aboutbox">
-                        <h6 className="text-[#007AFC] font-semibold text-[16px]">Mohamed Ali</h6>
-                        <p className="text-[#737373] font-normal text-[14px]">Marketing Manger </p>
+                        <h6 className="text-[#007AFC] font-semibold text-[16px]">{HomeData.acf.clients_section.review_one.client_name}</h6>
+                        <p className="text-[#737373] font-normal text-[14px]">{HomeData.acf.clients_section.review_one.client_designation}</p>
                       </div>
                     </div>
-                    <p className="customerReview text-[14px] font-normal text-[#313131] mt-3">Give your team the ability to quickly create, send, and track docs within an approval system that works for everyone. And will be very easy to work with appilo that workflow will work only for your benefit. From to quickly create, send, and track docs within an approval.</p>
+                  <div className="customerReview text-[14px] font-normal text-[#313131] mt-3" dangerouslySetInnerHTML={{ __html: HomeData.acf.clients_section.review_one.client_review }}></div>
                   </div>
                   <div className="bottomImg absolute bottom-4">
                     <img src="bottomlightblue.png" />
@@ -289,13 +291,13 @@ export default function Index({ blogsData, allblogsData }) {
                   </div>
                   <div className="Review text-left">
                     <div className="clientdetail flex items-center gap-2">
-                      <img src="Name.png" />
+                      <img src={HomeData.acf.clients_section.review_two.client_image} />
                       <div className="aboutbox">
-                        <h6 className="text-[#007AFC] font-semibold text-[16px]">Mohamed Ali</h6>
-                        <p className="text-[#737373] font-normal text-[14px]">Marketing Manger </p>
+                        <h6 className="text-[#007AFC] font-semibold text-[16px]">{HomeData.acf.clients_section.review_two.client_name}</h6>
+                        <p className="text-[#737373] font-normal text-[14px]">{HomeData.acf.clients_section.review_two.client_designation}</p>
                       </div>
                     </div>
-                    <p className="customerReview text-[14px] font-normal text-[#313131] mt-3">Give your team the ability to quickly create, send, and track docs within an approval system that works for everyone. And will be very easy to work with appilo that workflow will work only for your benefit. From to quickly create, send, and track docs within an approval.</p>
+                  <div className="customerReview text-[14px] font-normal text-[#313131] mt-3" dangerouslySetInnerHTML={{ __html: HomeData.acf.clients_section.review_two.client_review }}></div>
                   </div>
                   <div className="bottomImg absolute bottom-4">
                     <img src="bottomBlue.png" />
@@ -309,13 +311,13 @@ export default function Index({ blogsData, allblogsData }) {
                   </div>
                   <div className="Review text-left">
                     <div className="clientdetail flex items-center gap-2">
-                      <img src="Name.png" />
+                      <img src={HomeData.acf.clients_section.review_three.client_image} />
                       <div className="aboutbox">
-                        <h6 className="text-[#007AFC] font-semibold text-[16px]">Mohamed Ali</h6>
-                        <p className="text-[#737373] font-normal text-[14px]">Marketing Manger </p>
+                        <h6 className="text-[#007AFC] font-semibold text-[16px]">{HomeData.acf.clients_section.review_three.client_name}</h6>
+                        <p className="text-[#737373] font-normal text-[14px]">{HomeData.acf.clients_section.review_three.client_designation}</p>
                       </div>
                     </div>
-                    <p className="customerReview text-[14px] font-normal text-[#313131] mt-3">Give your team the ability to quickly create, send, and track docs within an approval system that works for everyone. And will be very easy to work with appilo that workflow will work only for your benefit. From to quickly create, send, and track docs within an approval.</p>
+                  <div className="customerReview text-[14px] font-normal text-[#313131] mt-3" dangerouslySetInnerHTML={{ __html: HomeData.acf.clients_section.review_three.client_review }}></div>
                   </div>
                   <div className="bottomImg absolute bottom-4">
                     <img src="bottomlightblue.png" />
@@ -338,8 +340,14 @@ export default function Index({ blogsData, allblogsData }) {
 export async function getStaticProps() {
   let blogsData = {};
   let allblogsData = [];
+  let HomeData = {};
 
   try {
+    const homeresponse = await axios.get(
+      `${process.env.NEXT_PUBLIC_API_BASE_URL}/wp-json/wp/v2/pages/11`
+    );
+    HomeData = homeresponse.data;
+
     const projectsResponse = await axios.get(
       `${process.env.NEXT_PUBLIC_API_BASE_URL}/wp-json/wp/v2/pages/1022`
     );
@@ -360,6 +368,7 @@ export async function getStaticProps() {
     props: {
       blogsData,
       allblogsData,
+      HomeData
     },
     revalidate: 3600,
   };
