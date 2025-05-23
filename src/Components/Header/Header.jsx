@@ -51,12 +51,12 @@ const Header = ({HeaderfooterData}) => {
 
                         {/* Desktop Navigation */}
                         <nav className="hidden iPad:flex space-x-6">
-                            <Link href={HeaderfooterData.acf.header.navigation.item_one_url} className="">{HeaderfooterData.acf.header.navigation.item_one_text}</Link>
-                            <Link href={HeaderfooterData.acf.header.navigation.item_two_url} className="">{HeaderfooterData.acf.header.navigation.item_two_text}</Link>
-                            <Link href={HeaderfooterData.acf.header.navigation.item_three_url} className="">{HeaderfooterData.acf.header.navigation.item_three_text}</Link>
-                            <Link href={HeaderfooterData.acf.header.navigation.item_four_url} className="">{HeaderfooterData.acf.header.navigation.item_four_text}</Link>
-                            <Link href={HeaderfooterData.acf.header.navigation.item_five_url} className="">{HeaderfooterData.acf.header.navigation.item_five_text}</Link>
-                            <Link href={HeaderfooterData.acf.header.navigation.item_six_url} className="">{HeaderfooterData.acf.header.navigation.item_six_text}</Link>
+                            <Link data-aos="fade-in"  data-aos-duration="1500" href={HeaderfooterData.acf.header.navigation.item_one_url} className="">{HeaderfooterData.acf.header.navigation.item_one_text}</Link>
+                            <Link data-aos="fade-in"  data-aos-duration="1500" href={HeaderfooterData.acf.header.navigation.item_two_url} className="">{HeaderfooterData.acf.header.navigation.item_two_text}</Link>
+                            <Link data-aos="fade-in"  data-aos-duration="1500" href={HeaderfooterData.acf.header.navigation.item_three_url} className="">{HeaderfooterData.acf.header.navigation.item_three_text}</Link>
+                            <Link data-aos="fade-in"  data-aos-duration="1500" href={HeaderfooterData.acf.header.navigation.item_four_url} className="">{HeaderfooterData.acf.header.navigation.item_four_text}</Link>
+                            <Link data-aos="fade-in"  data-aos-duration="1500" href={HeaderfooterData.acf.header.navigation.item_five_url} className="">{HeaderfooterData.acf.header.navigation.item_five_text}</Link>
+                            <Link data-aos="fade-in"  data-aos-duration="1500" href={HeaderfooterData.acf.header.navigation.item_six_url} className="">{HeaderfooterData.acf.header.navigation.item_six_text}</Link>
                         </nav>
 
                         {/* Hamburger Button (Mobile Only) */}
@@ -102,12 +102,12 @@ const Header = ({HeaderfooterData}) => {
 
                             {/* Menu Links */}
                             <div className="h-full">
-                            <Link href={HeaderfooterData.acf.header.navigation.item_one_url} className="">{HeaderfooterData.acf.header.navigation.item_one_text}</Link>
-                            <Link href={HeaderfooterData.acf.header.navigation.item_two_url} className="">{HeaderfooterData.acf.header.navigation.item_two_text}</Link>
-                            <Link href={HeaderfooterData.acf.header.navigation.item_three_url} className="">{HeaderfooterData.acf.header.navigation.item_three_text}</Link>
-                            <Link href={HeaderfooterData.acf.header.navigation.item_four_url} className="">{HeaderfooterData.acf.header.navigation.item_four_text}</Link>
-                            <Link href={HeaderfooterData.acf.header.navigation.item_five_url} className="">{HeaderfooterData.acf.header.navigation.item_five_text}</Link>
-                            <Link href={HeaderfooterData.acf.header.navigation.item_six_url} className="">{HeaderfooterData.acf.header.navigation.item_six_text}</Link>
+                            <Link data-aos="fade-in"  data-aos-duration="1500" href={HeaderfooterData.acf.header.navigation.item_one_url} className="">{HeaderfooterData.acf.header.navigation.item_one_text}</Link>
+                            <Link data-aos="fade-in"  data-aos-duration="1500" href={HeaderfooterData.acf.header.navigation.item_two_url} className="">{HeaderfooterData.acf.header.navigation.item_two_text}</Link>
+                            <Link data-aos="fade-in"  data-aos-duration="1500" href={HeaderfooterData.acf.header.navigation.item_three_url} className="">{HeaderfooterData.acf.header.navigation.item_three_text}</Link>
+                            <Link data-aos="fade-in"  data-aos-duration="1500" href={HeaderfooterData.acf.header.navigation.item_four_url} className="">{HeaderfooterData.acf.header.navigation.item_four_text}</Link>
+                            <Link data-aos="fade-in"  data-aos-duration="1500" href={HeaderfooterData.acf.header.navigation.item_five_url} className="">{HeaderfooterData.acf.header.navigation.item_five_text}</Link>
+                            <Link data-aos="fade-in"  data-aos-duration="1500" href={HeaderfooterData.acf.header.navigation.item_six_url} className="">{HeaderfooterData.acf.header.navigation.item_six_text}</Link>
                             </div>
                         </div>
                     </div>
