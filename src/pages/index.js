@@ -38,14 +38,13 @@ export default function Index({ blogsData, allblogsData, HomeData, HeaderfooterD
         <div className="container relative z-[9]">
           <div className="BannerContent relative" data-aos="fade-up" data-aos-duration="1500">
             <h1><span className="text-[#007DF5]">{HomeData.acf.banner_section.banner_title_blue_text}</span> {HomeData.acf.banner_section.banner_title}</h1>
-            {/* <p className="text-lg font-semibold text-themeBlue mt-[20px] mb-[30px] lg:mb-[40px] xl:mb-[40px]">Founded in 2021, SoftHub is an innovative digital agency in Dubai, UAE. It excels in cutting-edge solutions and prioritizes client needs, leveraging creativity and tech expertise for diverse clients.</p> */}
             <div className="text-lg font-semibold text-themeBlue mt-[20px] mb-[30px] lg:mb-[40px] xl:mb-[40px]" dangerouslySetInnerHTML={{ __html: HomeData.acf.banner_section.banner_description }}></div>
             <Link className="btn" href={HomeData.acf.banner_section.banner_button_url}>{HomeData.acf.banner_section.banner_button_text}</Link>
           </div>
         </div>
         <div className="container absolute left-0 right-0 bottom-40 Badges">
           <div className="flex justify-between items-center">
-            <div className="Tags LeftTags" data-aos="fade-up" data-aos-duration="1500">
+            <div className="Tags LeftTags" data-aos="fade-right" data-aos-duration="1500">
               <ul>
                 <li>
                   <Link href="#.">{HomeData.acf.banner_section.banner_left_badges.left_badge_one}</Link>
@@ -58,7 +57,7 @@ export default function Index({ blogsData, allblogsData, HomeData, HeaderfooterD
                 </li>
               </ul>
             </div>
-            <div className="Tags RightTags" data-aos="fade-up" data-aos-duration="1500">
+            <div className="Tags RightTags" data-aos="fade-left" data-aos-duration="1500">
               <ul>
                 <li>
                   <Link href="#.">{HomeData.acf.banner_section.banner_right_badges.right_badge_one}</Link>
@@ -74,7 +73,7 @@ export default function Index({ blogsData, allblogsData, HomeData, HeaderfooterD
           </div>
         </div>
         {/* Partner's Section */}
-        <section className="partnersLogosSection" data-aos="fade-up" data-aos-duration="1500">
+        <section className="partnersLogosSection" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="500">
           <div className="container">
             <div className="imagesWrapper">
               <Swiper
@@ -121,12 +120,12 @@ export default function Index({ blogsData, allblogsData, HomeData, HeaderfooterD
       </section>
 
       {/* Services Section */}
-      <div className="container">
+      <div className="container overflow-hidden">
         <section className="ServicesSection">
-          <h6 className="text-themeBlue mb-[6px]">{HomeData.acf.services_section.section_subheading}</h6>
-          <h2 className="text-[#007AFC]">{HomeData.acf.services_section.section_title}</h2>
+          <h6 className="text-themeBlue mb-[6px]" data-aos="fade-down" data-aos-duration="1500">{HomeData.acf.services_section.section_subheading}</h6>
+          <h2 className="text-[#007AFC]" data-aos="fade-down" data-aos-duration="1500">{HomeData.acf.services_section.section_title}</h2>
           <div className="CardsWrapper">
-            <div className="ServiceCard">
+            <div className="ServiceCard" data-aos="fade-right" data-aos-duration="1500">
               <div className="cardicon">
                 <img className="CardBg" src="imgBg.png" />
                 <img src={HomeData.acf.services_section.services_cards.service_card_one.card_icon_url} />
@@ -136,7 +135,7 @@ export default function Index({ blogsData, allblogsData, HomeData, HeaderfooterD
                 <p>{HomeData.acf.services_section.services_cards.service_card_one.card_description}</p>
               </div>
             </div>
-            <div className="ServiceCard">
+            <div className="ServiceCard" data-aos="fade-up" data-aos-duration="1500">
               <div className="cardicon">
                 <img className="CardBg" src="imgBg.png" />
                 <img src={HomeData.acf.services_section.services_cards.service_card_two.card_icon_url} />
@@ -146,7 +145,7 @@ export default function Index({ blogsData, allblogsData, HomeData, HeaderfooterD
                 <p>{HomeData.acf.services_section.services_cards.service_card_two.card_description}</p>
               </div>
             </div>
-            <div className="ServiceCard">
+            <div className="ServiceCard" data-aos="fade-up" data-aos-duration="1500">
               <div className="cardicon">
                 <img className="CardBg" src="imgBg.png" />
                 <img src={HomeData.acf.services_section.services_cards.service_card_three.card_icon_url} />
@@ -156,7 +155,7 @@ export default function Index({ blogsData, allblogsData, HomeData, HeaderfooterD
                 <p>{HomeData.acf.services_section.services_cards.service_card_three.card_description}</p>
               </div>
             </div>
-            <div className="ServiceCard">
+            <div className="ServiceCard" data-aos="fade-left" data-aos-duration="1500">
               <div className="cardicon">
                 <img className="CardBg" src="imgBg.png" />
                 <img src={HomeData.acf.services_section.services_cards.service_card_four.card_icon_url} />
@@ -174,35 +173,35 @@ export default function Index({ blogsData, allblogsData, HomeData, HeaderfooterD
       <div className="container">
         <div className="qualitySection bg-themeBlue rounded-[20px]">
           <div className="outerlayer rounded_layer relative">
-            <Link className="LayerTag Left_Bottom" href="#.">{HomeData.acf.layers_section.outer_layer.left_badge}</Link>
+            <Link className="LayerTag Left_Bottom" data-aos="fade-right" data-aos-duration="1500" href="#.">{HomeData.acf.layers_section.outer_layer.left_badge}</Link>
             <div className="centerlayer rounded_layer relative">
-              <Link className="LayerTag Left_Top !bg-[#002B4A] !text-white" href="#.">{HomeData.acf.layers_section.center_layer.left_top_badge}</Link>
-              <Link className="LayerTag Left_Bottom !bg-[#6DE4DF]" href="#.">{HomeData.acf.layers_section.center_layer.left_bottom_badge}</Link>
+              <Link className="LayerTag Left_Top !bg-[#002B4A] !text-white" data-aos="fade-right" data-aos-duration="1500" href="#.">{HomeData.acf.layers_section.center_layer.left_top_badge}</Link>
+              <Link className="LayerTag Left_Bottom !bg-[#6DE4DF]" data-aos="fade-right" data-aos-duration="1500" href="#.">{HomeData.acf.layers_section.center_layer.left_bottom_badge}</Link>
               <div className="frontlayer flex items-start justify-center rounded_layer relative">
-                <Link className="LayerTag Left_Top" href="#.">{HomeData.acf.layers_section.inner_layer.left_top_badge}</Link>
+                <Link className="LayerTag Left_Top" data-aos="fade-right" data-aos-duration="1500" href="#.">{HomeData.acf.layers_section.inner_layer.left_top_badge}</Link>
                 <div className="innercontent text-center">
-                  <h6 className="text-white mb-[6px]">{HomeData.acf.layers_section.section_content.section_subheading}</h6>
-                  <h2 className="text-themeSeaGreen">{HomeData.acf.layers_section.section_content.section_title}</h2>
+                  <h6 className="text-white mb-[6px]" data-aos="zoom-in" data-aos-duration="1500">{HomeData.acf.layers_section.section_content.section_subheading}</h6>
+                  <h2 className="text-themeSeaGreen" data-aos="zoom-in" data-aos-duration="1500">{HomeData.acf.layers_section.section_content.section_title}</h2>
                 </div>
-                <Link className="LayerTag Right_Top" href="#.">{HomeData.acf.layers_section.inner_layer.right_top_badge}</Link>
-                <Link className="LayerTag Right_Bottom" href="#.">{HomeData.acf.layers_section.inner_layer.right_bottom_badge}</Link>
+                <Link className="LayerTag Right_Top" data-aos="fade-left" data-aos-duration="1500" href="#.">{HomeData.acf.layers_section.inner_layer.right_top_badge}</Link>
+                <Link className="LayerTag Right_Bottom" data-aos="fade-left" data-aos-duration="1500" href="#.">{HomeData.acf.layers_section.inner_layer.right_bottom_badge}</Link>
               </div>
-              <Link className="LayerTag right_mid" href="#.">{HomeData.acf.layers_section.center_layer.right_center_badge}</Link>
+              <Link className="LayerTag right_mid" data-aos="fade-left" data-aos-duration="1500" href="#.">{HomeData.acf.layers_section.center_layer.right_center_badge}</Link>
             </div>
-            <Link className="LayerTag Right_Top" href="#.">{HomeData.acf.layers_section.outer_layer.right_top_badge}</Link>
-            <Link className="LayerTag Right_Bottom" href="#.">{HomeData.acf.layers_section.outer_layer.right_bottom_badge}</Link>
+            <Link className="LayerTag Right_Top" data-aos="fade-left" data-aos-duration="1500" href="#.">{HomeData.acf.layers_section.outer_layer.right_top_badge}</Link>
+            <Link className="LayerTag Right_Bottom" data-aos="fade-left" data-aos-duration="1500" href="#.">{HomeData.acf.layers_section.outer_layer.right_bottom_badge}</Link>
           </div>
         </div>
       </div>
 
 
       {/* Blogs Section */}
-      <div className="container">
+      <div className="container overflow-hidden">
         <div className=" Blogs_Section">
-          <h6 className="text-themeBlue mb-[6px] text-center">{HomeData.acf.blogs_section.section_subheading}</h6>
-          <h2 className="text-[#007AFC] text-center">{HomeData.acf.blogs_section.section_title}</h2>
+          <h6 className="text-themeBlue mb-[6px] text-center" data-aos="fade-down" data-aos-duration="1500">{HomeData.acf.blogs_section.section_subheading}</h6>
+          <h2 className="text-[#007AFC] text-center" data-aos="fade-down" data-aos-duration="1500">{HomeData.acf.blogs_section.section_title}</h2>
           <div className="ContentWrap">
-            <ul className="BlogWrapper">
+            <ul className="BlogWrapper" data-aos="fade-right" data-aos-duration="1500">
               {allblogsData.slice(0, 2).map((blog, i) => (
                 <li key={i} className="text-black">
                   <Link className="Blog" href={`/blogs/${blog.slug}`}>
@@ -220,7 +219,7 @@ export default function Index({ blogsData, allblogsData, HomeData, HeaderfooterD
             </ul>
 
             {/* Additional Blog Titles */}
-            <div className="TopicBox">
+            <div className="TopicBox" data-aos="fade-left" data-aos-duration="1500">
               <h4 className="">{HomeData.acf.blogs_section.topic_heading}</h4>
               <ul className="">
                 {allblogsData.slice(2).map((blog, i) => (
@@ -242,11 +241,11 @@ export default function Index({ blogsData, allblogsData, HomeData, HeaderfooterD
       </div>
 
       {/* Clients Section */}
-      <div className="container">
+      <div className="container overflow-hidden">
         <section className="ServicesSection ClientsSection">
-          <h6 className="text-themeBlue mb-[6px]">{HomeData.acf.clients_section.section_sub_heading}</h6>
-          <h2 className="text-[#007AFC]">{HomeData.acf.clients_section.section_heading}</h2>
-          <div className="CardsWrapper">
+          <h6 className="text-themeBlue mb-[6px]" data-aos="fade-down" data-aos-duration="1500">{HomeData.acf.clients_section.section_sub_heading}</h6>
+          <h2 className="text-[#007AFC]" data-aos="fade-down" data-aos-duration="1500">{HomeData.acf.clients_section.section_heading}</h2>
+          <div className="CardsWrapper" data-aos="fade-up" data-aos-duration="1500">
             <Swiper
               spaceBetween={60}
               slidesPerView={4}

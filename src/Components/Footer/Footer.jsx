@@ -1,15 +1,28 @@
 import Link from 'next/link'
-import React from 'react'
+import React, { useEffect } from 'react'
 import { FaInstagram } from "react-icons/fa";
 import { CiLinkedin } from "react-icons/ci";
 
-const Footer = ({HeaderfooterData}) => {
+// Aos animate
+
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
+const Footer = ({ HeaderfooterData }) => {
+
+    useEffect(() => {
+        AOS.init({
+            duration: 1000, // animation duration in ms
+            once: true,     // whether animation should happen only once
+        });
+    }, []);
+
     return (
         <>
             <section className='footer bg-themeBlue'>
-                <div className='container'>
+                <div className='container overflow-hidden'>
                     <div className='footerwrapper'>
-                        <div className='col LogoSection'>
+                        <div className='col LogoSection' data-aos="fade-right" data-aos-duration="1500">
                             <img src={HeaderfooterData.acf.footer.content_box.footer_logo_url} />
                             <div className='text-[14px] text-white my-7' dangerouslySetInnerHTML={{ __html: HeaderfooterData.acf.footer.content_box.footer_description }}></div>
                             <div className='flex flex-wrap items-center gap-5'>
@@ -17,7 +30,7 @@ const Footer = ({HeaderfooterData}) => {
                                 <Link className='!text-[16px] btn !flex !py-[10px] !pr-[30px] gap-3 items-center text-white' href={HeaderfooterData.acf.footer.content_box.instagram_url}><FaInstagram /> <span>{HeaderfooterData.acf.footer.content_box.instagram_button_text}</span></Link>
                             </div>
                         </div>
-                        <div className='FooterMenuWrapper'>
+                        <div className='FooterMenuWrapper' data-aos="fade-left" data-aos-duration="1500">
                             <div className='col footerMenu'>
                                 <ul>
                                     <li>

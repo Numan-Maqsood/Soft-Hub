@@ -209,7 +209,7 @@ body.menu-open {
 }
 
 .ServicesSection .CardsWrapper .ServiceCard .cardContent {
-  @apply bg-[#C0EDFF] pt-[90px] px-[14px] pb-[50px] rounded-[20px] mt-[-70px];
+  @apply bg-[#C0EDFF] pt-[90px] px-[14px] min-h-[300px] pb-[50px] rounded-[20px] mt-[-70px];
 }
 
 .ClientsSection .ClientCard {
