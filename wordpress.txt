@@ -6,7 +6,7 @@ function auto_build_request($post_id, $post ){
 	$allowed_post_types = ['post', 'page'];
 		if ( $post->post_status == 'publish' ) {
 			$data = json_encode(['force_build'=>true]);
-			$url = 'https://api.vercel.com/v1/integrations/deploy/prj_8y7VX9ztfMZdIl8drKOcWAo6i2lP/cCmxyQ80jY?buildCache=false';
+			$url = 'https://api.vercel.com/v1/integrations/deploy/prj_rOI4p7BoANBgXN9XOgzG0730lAWB/CpDEq3co7P?buildCache=false';
 			$args = array(
 				'body' => $data,
 				'headers' => array(
@@ -25,7 +25,6 @@ function auto_build_request($post_id, $post ){
 			fclose($fp);
 		}
 }
-
 =====================================Function For Alt Text===================================
 
 function add_image_url_and_alt_to_acf_fields($response, $post, $request) {
