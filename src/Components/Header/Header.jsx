@@ -4,7 +4,8 @@ import Image from 'next/image';
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 
-const Header = () => {
+const Header = ({HeaderfooterData}) => {
+
     const [menuOpen, setMenuOpen] = useState(false);
 
     const toggleMenu = () => {
@@ -32,26 +33,26 @@ const Header = () => {
                 <div className='flex items-center justify-between px-7 py-4 md:px-8'>
                     {/* Logo */}
                     <div className="Logo">
-                        <Image src="/Logo.svg" alt="Logo" width={190} height={44} />
+                        <Image src={HeaderfooterData.acf.header.logo_url} alt="Logo" width={190} height={44} />
                     </div>
 
                     <div className="navigation">
 
                         {/* Desktop Navigation */}
                         <nav className="hidden iPad:flex space-x-6">
-                            <Link href="/" className="">Home</Link>
-                            <Link href="/about" className="">About</Link>
-                            <Link href="/services" className="">Services</Link>
-                            <Link href="/" className="">Our Clients</Link>
-                            <Link href="/Blogs" className="">Blogs</Link>
-                            <Link href="/contact" className="">Contact us</Link>
+                            <Link href={HeaderfooterData.acf.header.navigation.item_one_url} className="">{HeaderfooterData.acf.header.navigation.item_one_text}</Link>
+                            <Link href={HeaderfooterData.acf.header.navigation.item_two_url} className="">{HeaderfooterData.acf.header.navigation.item_two_text}</Link>
+                            <Link href={HeaderfooterData.acf.header.navigation.item_three_url} className="">{HeaderfooterData.acf.header.navigation.item_three_text}</Link>
+                            <Link href={HeaderfooterData.acf.header.navigation.item_four_url} className="">{HeaderfooterData.acf.header.navigation.item_four_text}</Link>
+                            <Link href={HeaderfooterData.acf.header.navigation.item_five_url} className="">{HeaderfooterData.acf.header.navigation.item_five_text}</Link>
+                            <Link href={HeaderfooterData.acf.header.navigation.item_six_url} className="">{HeaderfooterData.acf.header.navigation.item_six_text}</Link>
                         </nav>
 
                         {/* Hamburger Button (Mobile Only) */}
                         <div className="iPad:hidden">
                             <button
                                 onClick={toggleMenu}
-                                className="text-white focus:outline-none"
+                                className="text-white focus:outline-none block"
                                 aria-label="Toggle Menu"
                             >
                                 {/* Hamburger Icon */}
@@ -90,12 +91,12 @@ const Header = () => {
 
                             {/* Menu Links */}
                             <div className="h-full">
-                                <Link href="/" className="">Home</Link>
-                                <Link href="/about" className="">About</Link>
-                                <Link href="/services" className="">Services</Link>
-                                <Link href="/" className="">Our Clients</Link>
-                                <Link href="/Blogs" className="">Blogs</Link>
-                                <Link href="/contact" className="">Contact us</Link>
+                            <Link href={HeaderfooterData.acf.header.navigation.item_one_url} className="">{HeaderfooterData.acf.header.navigation.item_one_text}</Link>
+                            <Link href={HeaderfooterData.acf.header.navigation.item_two_url} className="">{HeaderfooterData.acf.header.navigation.item_two_text}</Link>
+                            <Link href={HeaderfooterData.acf.header.navigation.item_three_url} className="">{HeaderfooterData.acf.header.navigation.item_three_text}</Link>
+                            <Link href={HeaderfooterData.acf.header.navigation.item_four_url} className="">{HeaderfooterData.acf.header.navigation.item_four_text}</Link>
+                            <Link href={HeaderfooterData.acf.header.navigation.item_five_url} className="">{HeaderfooterData.acf.header.navigation.item_five_text}</Link>
+                            <Link href={HeaderfooterData.acf.header.navigation.item_six_url} className="">{HeaderfooterData.acf.header.navigation.item_six_text}</Link>
                             </div>
                         </div>
                     </div>

@@ -13,7 +13,7 @@ import Footer from "../Components/Footer/Footer";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
-export default function Index({ blogsData, allblogsData, HomeData }) {
+export default function Index({ blogsData, allblogsData, HomeData, HeaderfooterData }) {
 
   useEffect(() => {
     AOS.init({
@@ -30,7 +30,7 @@ export default function Index({ blogsData, allblogsData, HomeData }) {
       </Head>
 
       {/* Header */}
-      <Header />
+      <Header HeaderfooterData={HeaderfooterData}/>
 
       {/* Banner Section */}
       <section className="BannerSection">
@@ -331,7 +331,7 @@ export default function Index({ blogsData, allblogsData, HomeData }) {
 
 
       {/* Footer */}
-      <Footer />
+      <Footer HeaderfooterData={HeaderfooterData} />
     </>
   );
 }
@@ -341,12 +341,19 @@ export async function getStaticProps() {
   let blogsData = {};
   let allblogsData = [];
   let HomeData = {};
+  let HeaderfooterData = {};
 
   try {
     const homeresponse = await axios.get(
       `${process.env.NEXT_PUBLIC_API_BASE_URL}/wp-json/wp/v2/pages/11`
     );
     HomeData = homeresponse.data;
+
+
+    const headerfooterresponse = await axios.get(
+      `${process.env.NEXT_PUBLIC_API_BASE_URL}/wp-json/wp/v2/pages/1668`
+    );
+    HeaderfooterData = headerfooterresponse.data;
 
     const projectsResponse = await axios.get(
       `${process.env.NEXT_PUBLIC_API_BASE_URL}/wp-json/wp/v2/pages/1022`
@@ -368,6 +375,7 @@ export async function getStaticProps() {
     props: {
       blogsData,
       allblogsData,
+      HeaderfooterData,
       HomeData
     },
     revalidate: 3600,
