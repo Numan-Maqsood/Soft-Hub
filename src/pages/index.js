@@ -45,29 +45,29 @@ export default function Index({ blogsData, allblogsData, HomeData, HeaderfooterD
         </div>
         <div className="container absolute left-0 right-0 bottom-40 Badges">
           <div className="flex justify-between items-center">
-            <div className="Tags LeftTags">
+            <div className="Tags LeftTags" data-aos="fade-up" data-aos-duration="1500">
               <ul>
                 <li>
-                  <Link data-aos="fade-up" data-aos-duration="1500" href="#.">{HomeData.acf.banner_section.banner_left_badges.left_badge_one}</Link>
+                  <Link href="#.">{HomeData.acf.banner_section.banner_left_badges.left_badge_one}</Link>
                 </li>
                 <li>
-                  <Link data-aos="fade-up" data-aos-duration="1500" href="#.">{HomeData.acf.banner_section.banner_left_badges.left_badge_two}</Link>
+                  <Link href="#.">{HomeData.acf.banner_section.banner_left_badges.left_badge_two}</Link>
                 </li>
                 <li>
-                  <Link data-aos="fade-up" data-aos-duration="1500" href="#.">{HomeData.acf.banner_section.banner_left_badges.left_badge_three}</Link>
+                  <Link href="#.">{HomeData.acf.banner_section.banner_left_badges.left_badge_three}</Link>
                 </li>
               </ul>
             </div>
-            <div className="Tags RightTags">
+            <div className="Tags RightTags" data-aos="fade-up" data-aos-duration="1500">
               <ul>
                 <li>
-                  <Link data-aos="fade-up" data-aos-duration="1500" href="#.">{HomeData.acf.banner_section.banner_right_badges.right_badge_one}</Link>
+                  <Link href="#.">{HomeData.acf.banner_section.banner_right_badges.right_badge_one}</Link>
                 </li>
                 <li>
-                  <Link data-aos="fade-up" data-aos-duration="1500" href="#.">{HomeData.acf.banner_section.banner_right_badges.right_badge_two}</Link>
+                  <Link href="#.">{HomeData.acf.banner_section.banner_right_badges.right_badge_two}</Link>
                 </li>
                 <li>
-                  <Link data-aos="fade-up" data-aos-duration="1500" href="#.">{HomeData.acf.banner_section.banner_right_badges.right_badge_three}</Link>
+                  <Link href="#.">{HomeData.acf.banner_section.banner_right_badges.right_badge_three}</Link>
                 </li>
               </ul>
             </div>
