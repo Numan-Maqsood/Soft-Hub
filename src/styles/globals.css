@@ -438,6 +438,60 @@ body.menu-open {
 
 /* Footer Css Close */
 
+
+/* Services Page Css Start */
+
+.ServicesBanner::before {
+  content: '';
+  @apply absolute left-0 right-0 bottom-0 w-full h-[50%] z-[10];
+  background: #2a7b9b;
+  background: linear-gradient(180deg,
+      rgba(42, 123, 155, 0) 50%,
+      rgba(255, 255, 255, 1) 90%);
+}
+
+.ServicesBanner {
+  @apply bg-[#EBF1F6];
+}
+
+.ScreenImages {
+  @apply max-w-[1000px] mx-auto absolute left-0 right-0 bottom-0 px-[15px];
+}
+
+.ScreenImages .underLayer {
+  @apply absolute bottom-[-520px] right-[-60px] z-[-1];
+}
+
+.ServicesBanner .container {
+  @apply h-full flex justify-center items-center;
+}
+
+.ServicesBanner .container .BannerContent {
+  @apply mt-[-250px];
+}
+
+.ServicesCards {
+  @apply py-[60px] flex flex-wrap gap-[80px];
+}
+
+.ServicesCards .ServiceCard .iconBox img {
+  @apply w-[64px] h-[64px];
+}
+
+.ServicesCards .ServiceCard {
+  @apply flex gap-[60px] items-center;
+}
+
+.ServicesCards .ServiceCard .iconBox {
+  @apply max-w-[calc(30%-10%)] w-full;
+}
+
+.ServicesCards .ServiceCard .Desc {
+  @apply max-w-[calc(90%-10%)] text-lg text-black w-full;
+}
+
+/* Services Page Css Close */
+
 /* ------------Media Queries-Start-----------*/
 
 @media (max-width: 1440px) {
@@ -534,6 +588,22 @@ body.menu-open {
   .ClientsSection .CardsWrapper {
     @apply block;
   }
+
+  .ScreenImages .underLayer {
+    @apply absolute bottom-[-600px] right-[-70px] z-[-1];
+  }
+
+  .ScreenImages {
+    @apply max-w-[600px];
+  }
+
+  .ServicesBanner {
+    @apply h-[800px] relative;
+  }
+
+  .ServicesBanner .container .BannerContent {
+    @apply mt-[-120px];
+  }
 }
 
 @media (max-width: 991px) {
@@ -621,6 +691,26 @@ body.menu-open {
 
   .Blogs_Section .ContentWrap .TopicBox li {
     @apply w-full;
+  }
+
+  .ScreenImages .underLayer {
+    @apply absolute bottom-[-600px] right-[-70px] z-[-1];
+  }
+
+  .ScreenImages {
+    @apply max-w-[600px];
+  }
+
+  .ServicesBanner {
+    @apply h-[700px] relative;
+  }
+
+  .ServicesBanner .container .BannerContent {
+    @apply mt-[-120px];
+  }
+
+  .ServicesCards .ServiceCard .iconBox {
+    @apply max-w-[calc(30%-10px)];
   }
 }
 
@@ -757,11 +847,40 @@ body.menu-open {
   }
 
   .Blogs_Section .ContentWrap .BlogWrapper .blogImage,
-  .Blogs_Section .ContentWrap .BlogWrapper .BlogContent  {
+  .Blogs_Section .ContentWrap .BlogWrapper .BlogContent {
     @apply max-w-full;
   }
 
   .Blogs_Section .ContentWrap {
     @apply flex-col;
+  }
+
+  .ScreenImages .underLayer {
+    @apply absolute bottom-[-360px] right-[10px] z-[-1];
+  }
+
+  .ServicesBanner {
+    @apply h-[600px] relative;
+  }
+
+  .ServicesBanner .container .BannerContent {
+    @apply mt-[-80px];
+  }
+
+  .ServicesCards .ServiceCard {
+    @apply flex-wrap gap-[10px];
+  }
+
+  .ServicesCards .ServiceCard .Desc {
+    @apply text-sm;
+  }
+
+  .ServicesCards .ServiceCard .iconBox,
+  .ServicesCards .ServiceCard .Desc {
+    @apply max-w-full;
+  }
+
+  .ServicesCards {
+    @apply gap-[50px];
   }
 }
