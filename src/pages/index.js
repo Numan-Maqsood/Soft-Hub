@@ -174,46 +174,17 @@ export default function Index ({
                 onSlideChange={() => console.log('slide change')}
                 onSwiper={swiper => console.log(swiper)}
               >
-                <SwiperSlide>
-                  <div className='PartnerLogo'>
-                    <img
-                      src={
-                        HomeData.acf.banner_section.partners_slider
-                          .image_one_url
-                      }
-                    />
-                  </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                  <div className='PartnerLogo'>
-                    <img
-                      src={
-                        HomeData.acf.banner_section.partners_slider
-                          .image_two_url
-                      }
-                    />
-                  </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                  <div className='PartnerLogo'>
-                    <img
-                      src={
-                        HomeData.acf.banner_section.partners_slider
-                          .image_three_url
-                      }
-                    />
-                  </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                  <div className='PartnerLogo'>
-                    <img
-                      src={
-                        HomeData.acf.banner_section.partners_slider
-                          .image_four_url
-                      }
-                    />
-                  </div>
-                </SwiperSlide>
+                {Object.values(
+                  HomeData.acf.banner_section.partners_slider || {}
+                )
+                  .filter(img => img && img.trim() !== '') // Only keep non-empty URLs
+                  .map((img, index) => (
+                    <SwiperSlide key={index}>
+                      <div className='PartnerLogo'>
+                        <img src={img} alt={`Partner ${index + 1}`} />
+                      </div>
+                    </SwiperSlide>
+                  ))}
               </Swiper>
             </div>
           </div>
