@@ -3,9 +3,7 @@ import React from 'react'
 import Header from '../Components/Header/Header'
 import axios from 'axios'
 import Footer from '../Components/Footer/Footer'
-import { SwiperSlide } from 'swiper/react'
 import Link from 'next/link'
-import Swiper from 'swiper'
 import { FaArrowLeftLong } from "react-icons/fa6";
 
 const services = ({ HeaderfooterData }) => {
@@ -67,6 +65,8 @@ const services = ({ HeaderfooterData }) => {
                     </div>
                 </section>
             </div>
+            
+            
             {/* Footer */}
             <Footer HeaderfooterData={HeaderfooterData} />
         </>

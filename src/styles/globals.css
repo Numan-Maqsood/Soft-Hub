@@ -492,7 +492,118 @@ body.menu-open {
 
 /* Services Page Css Close */
 
-/* ------------Media Queries-Start-----------*/
+
+/* About Us Page css Start */
+
+.AboutSetion {
+  @apply py-[80px] max-w-[910px] mx-auto;
+}
+
+.AboutSetion h2 {
+  @apply mt-[20px] mb-[30px];
+}
+
+.AboutSetion p {
+  @apply text-xl text-black;
+}
+
+.IconBoxSection {
+  @apply bg-[#007AFC] overflow-hidden max-w-[980px] mx-auto rounded-[32px] py-[50px] px-[140px];
+}
+
+.IconBoxSection .IconBox {
+  @apply text-center max-w-fit w-full;
+}
+
+.IconBoxSection .IconsWrapper {
+  @apply flex justify-between gap-10 items-center;
+}
+
+.IconBoxSection .IconsWrapper.underIconsWrapper {
+  @apply !justify-evenly;
+}
+
+.IconBox img {
+  @apply w-[64px] h-[64px] mb-[10px] mx-auto;
+}
+
+.IconBox h4 {
+  @apply text-[28px] text-white font-normal;
+}
+
+.VisionSection {
+  @apply bg-[#F6F6F6] rounded-[32px] pt-[260px] px-[20px] pb-[100px] mt-[-180px];
+}
+
+.VisionSection .ContentWrapper {
+  @apply flex items-center max-w-[980px] mx-auto gap-[90px] flex-wrap;
+}
+
+.VisionSection .ContentWrapper .ContentBox {
+  @apply max-w-[calc(50%-45px)] w-full;
+}
+
+.VisionSection .ContentWrapper .ContentBox p {
+  @apply text-xl text-black mb-[0px] mt-[30px];
+}
+
+.ChooseUs .ChooseUsCards .ChooseCard .cardicon {
+  @apply flex justify-center items-center w-[120px] mx-auto h-[120px];
+}
+
+.ChooseUs .ChooseUsCards {
+  @apply flex justify-between pt-[100px] pb-[200px];
+}
+
+.ChooseUs .ChooseUsCards .ChooseCard {
+  @apply max-w-[calc(24%-20px)] absolute w-full;
+}
+
+.ChooseUs .ChooseUsCards .ChooseCard:nth-child(2) {
+  @apply bottom-[115px];
+}
+
+.ChooseUs .ChooseUsCards .ChooseCard:nth-child(3) {
+  @apply bottom-auto top-[55%] left-[7%] max-w-[calc(34%-20px)];
+}
+
+.ChooseUs .ChooseUsCards .ChooseCard:nth-child(3) .cardicon {
+  @apply ml-auto mr-0 mt-[15px];
+}
+
+.ChooseUs .ChooseUsCards .ChooseCard:nth-child(4) {
+  @apply bottom-[40%] left-[42%];
+}
+
+.ChooseUs .ChooseUsCards .ChooseCard .cardicon h4 {
+  @apply font-normal text-[32px];
+}
+
+.ChooseUs .ChooseUsCards .ChooseCard:nth-child(4) .cardContent h5 {
+  @apply mt-[60px];
+}
+
+.ChooseUs .ChooseUsCards .ChooseCard:nth-child(5) {
+  @apply top-[20%] right-[12%];
+}
+
+.ChooseUs .ChooseUsCards .ChooseCard:nth-child(5) .cardicon {
+  @apply mt-[70px];
+}
+
+.ChooseUs .ChooseUsCards .ChooseCard .cardicon h4 {
+  @apply absolute text-white;
+}
+
+.ChooseUs .ChooseUsCards .ChooseCard .cardContent h5 {
+  @apply text-xl;
+}
+
+/* About Us Page Css Close */
+
+
+
+/* ------------Responsive Css Start-----------*/
 
 @media (max-width: 1440px) {
   .container {
@@ -604,6 +715,18 @@ body.menu-open {
   .ServicesBanner .container .BannerContent {
     @apply mt-[-120px];
   }
+
+  .IconBoxSection {
+    @apply max-w-[85%];
+  }
+
+  .ChooseUs .ChooseUsCards .ChooseCard .cardicon h4 {
+    @apply text-xl;
+  }
+
+  .ChooseUs .ChooseUsCards .ChooseCard .cardicon {
+    @apply w-[120px] h-[120px];
+  }
 }
 
 @media (max-width: 991px) {
@@ -711,6 +834,22 @@ body.menu-open {
 
   .ServicesCards .ServiceCard .iconBox {
     @apply max-w-[calc(30%-10px)];
+  }
+
+  .IconBoxSection {
+    @apply px-[80px];
+  }
+
+  .IconBoxSection .IconsWrapper.underIconsWrapper {
+    @apply mt-[30px];
+  }
+
+  .VisionSection .ContentWrapper .ContentBox {
+    @apply max-w-[calc(50%-20px)];
+  }
+
+  .VisionSection .ContentWrapper {
+    @apply gap-[40px];
   }
 }
 
@@ -882,5 +1021,64 @@ body.menu-open {
 
   .ServicesCards {
     @apply gap-[50px];
+  }
+
+  .AboutSetion p {
+    @apply text-sm;
+  }
+
+  .AboutSetion h2 {
+    @apply mt-[10px] mb-[20px];
+  }
+
+  .AboutSetion {
+    @apply py-[50px];
+  }
+
+  .IconBoxSection {
+    @apply px-[20px];
+  }
+
+  .IconBoxSection .IconsWrapper.underIconsWrapper {
+    @apply mt-[50px];
+  }
+
+  .VisionSection .ContentWrapper .ContentBox {
+    @apply max-w-full;
+  }
+
+  .VisionSection .ContentWrapper {
+    @apply gap-[40px];
+  }
+
+  .curveImage {
+    @apply hidden;
+  }
+
+
+  .ChooseUs .ChooseUsCards {
+    @apply py-[60px] pb-0 gap-[30px] flex-wrap;
+  }
+
+  .ChooseUs .ChooseUsCards .ChooseCard,
+  .ChooseUs .ChooseUsCards .ChooseCard:nth-child(3) {
+    @apply static max-w-full m-0;
+  }
+
+  .ChooseUs .ChooseUsCards .ChooseCard:nth-child(3),
+  .ChooseUs .ChooseUsCards .ChooseCard:nth-child(5) {
+    @apply flex flex-col-reverse;
+  }
+
+  .ChooseUs .ChooseUsCards .ChooseCard:nth-child(3) .cardicon {
+    @apply mr-auto;
+  }
+
+  .ChooseUs .ChooseUsCards .ChooseCard:nth-child(5) .cardicon {
+    @apply mt-0;
+  }
+
+  .ChooseUs .ChooseUsCards .ChooseCard:nth-child(4) .cardContent h5 {
+    @apply mt-[20px];
   }
 }
